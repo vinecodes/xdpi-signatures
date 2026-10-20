@@ -1,0 +1,6 @@
+{
+  "about": "TLS client fingerprints (JA4, read by nDPI) of software that tunnels. A fingerprint names the TLS library and settings a client uses, which other apps on the same library can share, so Prism never acts on one alone: it is shown on the connection, and Block VPN acts only with a second signal (the server learned as a VPN, a certificate finding, a name that is missing, made up or doesn't exist, or a server that answers no one else). [ja4, app, category]; categories are nDPI's names.",
+  "signatures": [
+    ["t12d0708h2_897f2bbc56b3_850db0a77c9e", "Hotspot Shield", "VPN"]
+  ]
+}

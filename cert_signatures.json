@@ -1,0 +1,6 @@
+{
+  "_comment": "Server certificate issuers that name the software behind a server, whatever host the client claims. Matched case-insensitively as a substring of the issuer (RFC 4514 text). [pattern, app, category]; categories are nDPI's names.",
+  "signatures": [
+    ["Hydra Authentication", "Hotspot Shield", "VPN"]
+  ]
+}

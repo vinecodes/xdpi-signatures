@@ -1,0 +1,47 @@
+{
+  "about": "Facts about SSH implementations for xdpi_core/modules/ssh_kex.py: what a client or server that claims to be one of them can and cannot offer. No applications are named here.",
+  "markers": [
+    "ext-info-c",
+    "ext-info-s",
+    "kex-strict-c-v00@openssh.com",
+    "kex-strict-s-v00@openssh.com"
+  ],
+  "software": [
+    {
+      "family": "OpenSSH",
+      "banner": "^OpenSSH_(\\d+)\\.(\\d+)",
+      "minor_scale": 10,
+      "margin": 2.0,
+      "introduced": {
+        "mlkem768x25519-sha256": 9.9,
+        "kex-strict-c-v00@openssh.com": 9.6,
+        "kex-strict-s-v00@openssh.com": 9.6,
+        "sntrup761x25519-sha512@openssh.com": 8.5,
+        "curve25519-sha256": 7.4,
+        "diffie-hellman-group16-sha512": 7.3,
+        "diffie-hellman-group18-sha512": 7.3,
+        "rsa-sha2-512": 7.2,
+        "rsa-sha2-256": 7.2
+      },
+      "conflicts": [
+        ["ssh-dss", "mlkem768x25519-sha256"],
+        ["ssh-dss-cert-v01@openssh.com", "mlkem768x25519-sha256"]
+      ],
+      "off_by_default": {
+        "ssh-dss": 7.0,
+        "ssh-dss-cert-v01@openssh.com": 7.0
+      }
+    },
+    {
+      "family": "PuTTY",
+      "banner": "^PuTTY_Release_(\\d+)\\.(\\d+)",
+      "minor_scale": 100,
+      "margin": 0.05,
+      "introduced": {
+        "mlkem768x25519-sha256": 0.83,
+        "kex-strict-c-v00@openssh.com": 0.80
+      },
+      "conflicts": []
+    }
+  ]
+}
