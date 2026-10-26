@@ -1,4 +1,5 @@
 {
+  "updated": "2026-10-26T16:00:00Z",
   "about": "Facts about SSH implementations for xdpi_core/modules/ssh_kex.py: what a client or server that claims to be one of them can and cannot offer. No applications are named here.",
   "markers": [
     "ext-info-c",
