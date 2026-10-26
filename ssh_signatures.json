@@ -41,7 +41,10 @@
         "mlkem768x25519-sha256": 0.83,
         "kex-strict-c-v00@openssh.com": 0.80
       },
-      "conflicts": []
+      "conflicts": [],
+      "required": [
+        {"any": ["curve25519-sha256", "curve25519-sha256@libssh.org"], "since": 0.68}
+      ]
     }
   ]
 }
