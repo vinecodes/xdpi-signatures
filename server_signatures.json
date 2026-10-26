@@ -1,0 +1,14 @@
+{
+  "updated": "2026-10-27T09:00:00Z",
+  "about": "JA4S (ServerHello) and JA4X (certificate) fingerprints of servers that carry tunnels, for xdpi_core/modules/ja4.py. A JA4X row with an issuer pattern names the software alone; other rows need a second sign.",
+  "ja4s": [],
+  "ja4x": [
+    {
+      "ja4x": "7022c563de38_7022c563de38_e3b0c44298fc",
+      "issuer": "^CN=www\\.[a-z2-7]{8,20}\\.com$",
+      "app": "Tor",
+      "category": "VPN",
+      "seen": "Tor relays' link certificates: a random www.<base32>.com issuer and www.<base32>.net subject, common name only, no extensions (three relays, 2026-10-26)"
+    }
+  ]
+}

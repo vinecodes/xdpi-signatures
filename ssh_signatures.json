@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26T16:00:00Z",
+  "updated": "2026-10-27T09:00:00Z",
   "about": "Facts about SSH implementations for xdpi_core/modules/ssh_kex.py: what a client or server that claims to be one of them can and cannot offer. No applications are named here.",
   "markers": [
     "ext-info-c",
@@ -25,8 +25,14 @@
         "rsa-sha2-256": 7.2
       },
       "conflicts": [
-        ["ssh-dss", "mlkem768x25519-sha256"],
-        ["ssh-dss-cert-v01@openssh.com", "mlkem768x25519-sha256"]
+        [
+          "ssh-dss",
+          "mlkem768x25519-sha256"
+        ],
+        [
+          "ssh-dss-cert-v01@openssh.com",
+          "mlkem768x25519-sha256"
+        ]
       ],
       "off_by_default": {
         "ssh-dss": 7.0,
@@ -40,12 +46,89 @@
       "margin": 0.05,
       "introduced": {
         "mlkem768x25519-sha256": 0.83,
-        "kex-strict-c-v00@openssh.com": 0.80
+        "mlkem768nistp256-sha256": 0.83,
+        "mlkem1024nistp384-sha384": 0.83,
+        "sntrup761x25519-sha512": 0.82,
+        "kex-strict-c-v00@openssh.com": 0.8,
+        "sntrup761x25519-sha512@openssh.com": 0.78,
+        "aes256-gcm@openssh.com": 0.78,
+        "aes128-gcm@openssh.com": 0.78,
+        "diffie-hellman-group15-sha512": 0.78,
+        "diffie-hellman-group16-sha512": 0.78,
+        "diffie-hellman-group17-sha512": 0.78,
+        "diffie-hellman-group18-sha512": 0.78,
+        "curve448-sha512": 0.75,
+        "ssh-ed448": 0.75,
+        "curve25519-sha256": 0.75,
+        "rsa-sha2-256": 0.73,
+        "rsa-sha2-512": 0.73,
+        "curve25519-sha256@libssh.org": 0.68,
+        "ssh-ed25519": 0.68,
+        "ecdh-sha2-nistp256": 0.68,
+        "ecdh-sha2-nistp384": 0.68,
+        "ecdh-sha2-nistp521": 0.68
       },
       "conflicts": [],
       "required": [
-        {"any": ["curve25519-sha256", "curve25519-sha256@libssh.org"], "since": 0.68}
-      ]
+        {
+          "any": [
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org"
+          ],
+          "since": 0.68
+        },
+        {
+          "any": [
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521"
+          ],
+          "since": 0.68
+        },
+        {
+          "any": [
+            "curve448-sha512"
+          ],
+          "since": 0.75
+        },
+        {
+          "any": [
+            "sntrup761x25519-sha512@openssh.com",
+            "sntrup761x25519-sha512"
+          ],
+          "since": 0.78
+        },
+        {
+          "any": [
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group18-sha512"
+          ],
+          "since": 0.78
+        },
+        {
+          "any": [
+            "aes256-gcm@openssh.com",
+            "aes128-gcm@openssh.com"
+          ],
+          "since": 0.78
+        },
+        {
+          "any": [
+            "kex-strict-c-v00@openssh.com"
+          ],
+          "since": 0.8
+        },
+        {
+          "any": [
+            "mlkem768x25519-sha256",
+            "mlkem768nistp256-sha256",
+            "mlkem1024nistp384-sha384"
+          ],
+          "since": 0.83
+        }
+      ],
+      "source": "Each version is the first PuTTY release whose source names the algorithm (release tarballs 0.67-0.83, checked 2026-10-27). Every key exchange, host key and cipher PuTTY knows is in its KEXINIT whatever its settings (ssh/transport2.c: settings reorder them; single DES aside).",
+      "required_margin": 0
     }
   ]
 }

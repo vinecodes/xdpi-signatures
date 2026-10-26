@@ -1,0 +1,9 @@
+{
+  "updated": "2026-10-27T09:00:00Z",
+  "about": "Encrypted Client Hello public names (the outer ClientHello's server_name an ECH service gives every site behind it), for xdpi_core/modules/ech.py. A name here is never a site anyone visits.",
+  "public_names": [
+    "cloudflare-ech.com",
+    "public.tls-ech.dev"
+  ],
+  "seen": "From live ECH configs in DNS HTTPS records, 2026-10-27: crypto.cloudflare.com \u2192 cloudflare-ech.com; tls-ech.dev \u2192 public.tls-ech.dev"
+}
